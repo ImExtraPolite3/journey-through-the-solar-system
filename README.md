@@ -1,1 +1,0 @@
-# journey-through-the-solar-system

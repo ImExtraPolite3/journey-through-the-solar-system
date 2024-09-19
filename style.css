@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Orbitron';
+  src: url(./fonts/Orbitron/Orbitron-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron';
+}
+
+header {
+  height: 100vh;
+  background-color: #111;
+  color: #ddd;
+  display: flex;
+}
+
+header > h1 {
+  margin: auto;
+}

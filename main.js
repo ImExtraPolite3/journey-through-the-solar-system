@@ -1,6 +1,7 @@
 import './style.css';
-import { addStars, animateTitle, moveStars } from './startPage';
+import { addStars, animateTitle, moveStars, moveToNext } from './startPage';
 
 animateTitle();
 addStars();
 moveStars();
+moveToNext();

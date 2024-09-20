@@ -27,6 +27,15 @@ function addStars() {
   }
 }
 
+function moveToNext() {
+  const moveDown = document.querySelector('header > img');
+  const app = document.getElementById('app');
+
+  moveDown.addEventListener('click', () => {
+    app.style.animation = 'slideDown 2s forwards';
+  });
+}
+
 function moveStars() {
   const stars = document.querySelectorAll('.star');
 
@@ -54,4 +63,4 @@ function animateTitle() {
   });
 }
 
-export { animateTitle, addStars, moveStars };
+export { animateTitle, addStars, moveStars, moveToNext };

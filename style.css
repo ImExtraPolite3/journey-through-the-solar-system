@@ -28,9 +28,11 @@ header > h1 {
 header > img {
   width: 60px;
   animation: bobbing 4000ms infinite both;
+  cursor: pointer;
 }
 
 #section-one {
+  height: 100vh;
   background-color: lightgray;
 }
 
@@ -47,5 +49,14 @@ header > img {
   }
   100% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
   }
 }

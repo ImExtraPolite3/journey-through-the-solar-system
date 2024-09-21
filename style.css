@@ -23,6 +23,14 @@ header {
 header > h1 {
   font-size: 3rem;
   margin: auto;
+  top: 35%;
+  z-index: 2;
+}
+
+.star {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
 }
 
 header > button {
@@ -31,8 +39,10 @@ header > button {
   cursor: pointer;
   padding: 5px 10px;
   border: solid;
-  margin-bottom: 50px;
   transition: background-color 250ms;
+  position: absolute;
+  bottom: 50px;
+  z-index: 2;
 }
 
 header > button:hover {
@@ -41,12 +51,23 @@ header > button:hover {
 
 #section-one {
   height: 100vh;
+  width: 100vw;
   background-color: lightgray;
 }
 
-.star {
-  position: absolute;
-  pointer-events: none;
+#outer {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#inner {
+  width: 500vw;
+  display: flex;
+}
+
+#inner > div {
+  width: 100vw;
+  height: 100vh;
 }
 
 @keyframes bobbing {
@@ -77,7 +98,7 @@ header > button:hover {
   }
   50% {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.5);
   }
   100% {
     opacity: 0;

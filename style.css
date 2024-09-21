@@ -25,10 +25,18 @@ header > h1 {
   margin: auto;
 }
 
-header > img {
-  width: 60px;
+header > button {
+  font-size: 1.2rem;
   animation: bobbing 4000ms infinite both;
   cursor: pointer;
+  padding: 5px 10px;
+  border: solid;
+  margin-bottom: 50px;
+  transition: background-color 250ms;
+}
+
+header > button:hover {
+  background-color: white;
 }
 
 #section-one {
@@ -38,6 +46,7 @@ header > img {
 
 .star {
   position: absolute;
+  pointer-events: none;
 }
 
 @keyframes bobbing {
@@ -58,5 +67,20 @@ header > img {
   }
   100% {
     transform: translateY(-100vh);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
   }
 }

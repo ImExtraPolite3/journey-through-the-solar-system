@@ -19,10 +19,11 @@ const titles = [
 function addStars() {
   const header = document.querySelector('header');
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 250; i++) {
     const createStar = document.createElement('div');
     createStar.innerHTML = star;
     createStar.classList.add('star');
+    createStar.style.animation = 'sparkle 20000ms infinite both';
     header.appendChild(createStar);
   }
 }
@@ -32,7 +33,7 @@ function moveToNext() {
   const app = document.getElementById('app');
 
   moveDown.addEventListener('click', () => {
-    app.style.animation = 'slideDown 2s forwards';
+    app.style.animation = 'slideDown 2s none';
   });
 }
 

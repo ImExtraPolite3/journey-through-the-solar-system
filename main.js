@@ -2,7 +2,7 @@ import './style.css';
 import {
   addStars,
   animateTitle,
-  horizonatalScroll,
+  horizontalScroll,
   moveStars,
   moveToNext,
 } from './startPage';
@@ -11,4 +11,4 @@ animateTitle();
 addStars();
 moveStars();
 moveToNext();
-horizonatalScroll();
+horizontalScroll();

@@ -9,6 +9,10 @@
   font-family: 'Orbitron';
 }
 
+html {
+  overflow-y: hidden;
+}
+
 header {
   height: 100vh;
   position: relative;
@@ -27,13 +31,19 @@ header > h1 {
   z-index: 2;
 }
 
+header > img {
+  width: 60px;
+  border: none;
+}
+
 .star {
   position: absolute;
   pointer-events: none;
   z-index: 1;
 }
 
-header > button {
+header > button,
+header > img {
   font-size: 1.2rem;
   animation: bobbing 4000ms infinite both;
   cursor: pointer;
@@ -43,6 +53,12 @@ header > button {
   position: absolute;
   bottom: 50px;
   z-index: 2;
+}
+
+header > img {
+  display: none;
+  width: 60px;
+  border: none;
 }
 
 header > button:hover {
@@ -57,7 +73,7 @@ header > button:hover {
 
 #outer {
   overflow-x: hidden;
-  width: 100%;
+  position: relative;
 }
 
 #inner {
@@ -65,9 +81,15 @@ header > button:hover {
   display: flex;
 }
 
-#inner > div {
+#inner > section {
   width: 100vw;
   height: 100vh;
+  margin-top: auto;
+}
+
+#inner > section > p {
+  text-align: center;
+  font-size: 3.5rem;
 }
 
 @keyframes bobbing {

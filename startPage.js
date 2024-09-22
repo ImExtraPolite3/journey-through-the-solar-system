@@ -29,11 +29,14 @@ function addStars() {
 }
 
 function moveToNext() {
-  const moveDown = document.querySelector('header > button');
-  const app = document.getElementById('app');
+  const scrollDownButton = document.querySelector('header > button');
+  const scrollDownArrow = document.querySelector('header > img');
+  const html = document.querySelector('html');
 
-  moveDown.addEventListener('click', () => {
-    app.style.animation = 'slideDown 2s forwards';
+  scrollDownButton.addEventListener('click', () => {
+    scrollDownButton.style.display = 'none';
+    scrollDownArrow.style.display = 'block';
+    html.style.overflowY = 'scroll';
   });
 }
 
@@ -65,17 +68,24 @@ function animateTitle() {
   });
 }
 
-function horizonatalScroll() {
-  gsap.to('#inner', {
-    xPercent: -400, // Moves the container to the left (since we have 5 sections, move by 400%)
+function horizontalScroll() {
+  const outer = document.getElementById('outer');
+  const inner = document.getElementById('inner');
+  const innerSections = gsap.utils.toArray('#inner > section');
+
+  gsap.to(inner, {
+    x: () => -(inner.offsetWidth - outer.offsetWidth),
     ease: 'none',
     scrollTrigger: {
-      trigger: '#outer',
-      pin: true, // Pins the container so it stays fixed while scrolling
-      scrub: true, // Smooth scrubbing
-      end: '+=4000', // Adjust the end based on the content's width (adjust as necessary)
+      trigger: '#section-one',
+      start: 'top top',
+      end: () => `+=${inner.offsetWidth - outer.offsetWidth}`,
+      scrub: 1,
+      pin: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
     },
   });
 }
 
-export { animateTitle, addStars, moveStars, moveToNext, horizonatalScroll };
+export { animateTitle, addStars, moveStars, moveToNext, horizontalScroll };

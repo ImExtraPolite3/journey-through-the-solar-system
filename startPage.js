@@ -1,7 +1,6 @@
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(TextPlugin, ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 const star = '✨';
 
@@ -19,23 +18,27 @@ const titles = [
 
 function addStars() {
   const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
 
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 100; i++) {
     const createStar = document.createElement('div');
     createStar.innerHTML = star;
     createStar.classList.add('star');
     header.appendChild(createStar);
+    footer.appendChild(createStar);
   }
 }
 
 function moveToNext() {
   const scrollDownButton = document.querySelector('header > button');
   const scrollDownArrow = document.querySelector('header > img');
+  const scrollDownText = document.querySelector('header > p');
   const html = document.querySelector('html');
 
   scrollDownButton.addEventListener('click', () => {
     scrollDownButton.style.display = 'none';
     scrollDownArrow.style.display = 'block';
+    scrollDownText.style.display = 'block';
     html.style.overflowY = 'scroll';
   });
 }
@@ -68,24 +71,4 @@ function animateTitle() {
   });
 }
 
-function horizontalScroll() {
-  const outer = document.getElementById('outer');
-  const inner = document.getElementById('inner');
-  const innerSections = gsap.utils.toArray('#inner > section');
-
-  gsap.to(inner, {
-    x: () => -(inner.offsetWidth - outer.offsetWidth),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#section-one',
-      start: 'top top',
-      end: () => `+=${inner.offsetWidth - outer.offsetWidth}`,
-      scrub: 1,
-      pin: true,
-      anticipatePin: 1,
-      invalidateOnRefresh: true,
-    },
-  });
-}
-
-export { animateTitle, addStars, moveStars, moveToNext, horizontalScroll };
+export { animateTitle, addStars, moveStars, moveToNext };

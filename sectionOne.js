@@ -2,8 +2,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-const allFacts = {
-  earthFacts: [
+const allFacts = [
+  [
     'Earth is approximately 4.54 billion years old.',
     'Earth is not a perfect sphere. It’s slightly flattened at the poles and bulging at the equator due to its rotation, making it an oblate spheroid.',
     'Earth’s atmosphere is made up of 78% nitrogen, 21% oxygen, and traces of other gases, such as argon and carbon dioxide.',
@@ -15,7 +15,7 @@ const allFacts = {
     "Earth's tilted axis of 23.5 degrees causes the seasons as it orbits the Sun.",
     'Earth has one natural satellite, the Moon, which helps stabilize the planet’s axial tilt and affects tides.',
   ],
-  marsFacts: [
+  [
     'Mars is often called the "Red Planet" due to its reddish appearance, caused by iron oxide (rust) on its surface.',
     'Mars is about half the size of Earth, with a diameter of approximately 6,779 kilometers (4,212 miles).',
     "Mars has only about 38% of Earth's gravity, meaning you would weigh significantly less on Mars.",
@@ -27,7 +27,7 @@ const allFacts = {
     'Mars is home to the largest volcano in the solar system, Olympus Mons, which stands about 13.6 miles (22 km) high, nearly three times the height of Mount Everest.',
     'Several rovers, such as Curiosity and Perseverance, have been sent to Mars to study its surface, geology, and potential signs of past life.',
   ],
-};
+];
 
 const allList = ['earth', 'mars'];
 
@@ -51,20 +51,15 @@ function horizontalScroll() {
 }
 
 function displayFacts() {
-  const arrayThingy = Object.values(allFacts);
+  for (let i = 0; i < allFacts.length; i++) {
+    const eachList = document.querySelector(`.${allList[i]}-facts`);
 
-  allList.forEach((list) => {
-    const eachList = document.querySelector(`.${list}-facts`);
-
-    for (let i = 0; i < arrayThingy.length; i++) {
-      const listItems = document.createElement('li');
-
-      arrayThingy[i].forEach((each) => {
-        listItems.textContent = each;
-        eachList.appendChild(listItems);
-      });
+    for (let j = 0; j < allFacts[i].length; j++) {
+      const listItem = document.createElement('li');
+      listItem.textContent = allFacts[i][j];
+      eachList.appendChild(listItem);
     }
-  });
+  }
 }
 
 export { horizontalScroll, displayFacts };

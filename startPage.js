@@ -36,6 +36,7 @@ function moveToNext() {
   const html = document.querySelector('html');
 
   scrollDownButton.addEventListener('click', () => {
+    playStartAudio();
     scrollDownButton.style.display = 'none';
     scrollDownArrow.style.display = 'block';
     scrollDownText.style.display = 'block';
@@ -58,6 +59,11 @@ function moveStars() {
     star.style.right = `${rightPosition}vw`;
     star.style.bottom = `${bottomPosition}vh`;
   });
+}
+
+function playStartAudio() {
+  const launchAudio = new Audio('./audio/launch-audio.mp3');
+  launchAudio.play();
 }
 
 function animateTitle() {

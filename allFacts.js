@@ -21,7 +21,6 @@ const allFacts = [
     'A day on Mars (called a "sol") is about 24.6 hours, just a little longer than a day on Earth. A year on Mars lasts 687 Earth days, almost twice as long as a year on Earth.',
     'While there’s no liquid water on the surface today, Mars has polar ice caps made of water and carbon dioxide. Evidence suggests that Mars had rivers, lakes, and even oceans in its ancient past.',
     'Mars is home to the largest volcano in the solar system, Olympus Mons, which stands about 13.6 miles (22 km) high, nearly three times the height of Mount Everest.',
-    'Several rovers, such as Curiosity and Perseverance, have been sent to Mars to study its surface, geology, and potential signs of past life.',
   ],
   [
     'Mercury is the closest planet to the Sun, orbiting at an average distance of about 36 million miles (58 million kilometers).',
@@ -33,7 +32,6 @@ const allFacts = [
     "Mercury's surface is covered with craters due to its lack of a significant atmosphere, which allows meteoroids to hit the planet frequently. Its surface resembles that of the Moon.",
     'Mercury has a large iron core, making up about 85% of the planet’s radius. This core generates a weak magnetic field, which is about 1% as strong as Earth’s.',
     'Mercury rotates very slowly on its axis, meaning one Mercurian day lasts about two-thirds of its year.',
-    'Mercury has been visited by spacecraft like NASA’s MESSENGER, which orbited the planet from 2011 to 2015, providing valuable information about its surface and composition.',
   ],
   [
     'Venus is the second planet from the Sun, orbiting at an average distance of about 67 million miles (108 million kilometers).',

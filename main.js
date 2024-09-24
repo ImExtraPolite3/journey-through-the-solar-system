@@ -1,5 +1,11 @@
 import './style.css';
-import { addStars, animateTitle, moveStars, moveToNext } from './startPage';
+import {
+  addStars,
+  animateTitle,
+  moveStars,
+  moveToNext,
+  showText,
+} from './startPage';
 import { horizontalScroll, displayFacts } from './sectionOne';
 
 window.onbeforeunload = function () {
@@ -12,3 +18,4 @@ moveStars();
 moveToNext();
 horizontalScroll();
 displayFacts();
+showText();

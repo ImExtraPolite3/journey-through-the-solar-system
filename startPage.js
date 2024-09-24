@@ -29,6 +29,32 @@ function addStars() {
   }
 }
 
+function showText() {
+  const planetImgContainer = document.querySelectorAll('.planet-image');
+  const planetImg = document.querySelectorAll('.planet-image > img');
+  const planetInfo = document.querySelectorAll('.planet-info');
+
+  for (let i = 0; i < planetImgContainer.length; i++) {
+    planetImg[i].addEventListener('click', () => {
+      planetImg.forEach((image) => {
+        image.style.width = '95%';
+      });
+
+      planetInfo.forEach((info) => {
+        info.style.display = 'none';
+      });
+
+      planetImgContainer.forEach((container) => {
+        container.style.flexDirection = 'column';
+      });
+
+      planetImg[i].style.width = 'max(20%, 150px)';
+      planetInfo[i].style.display = 'block';
+      planetImgContainer[i].style.flexDirection = 'row';
+    });
+  }
+}
+
 function moveToNext() {
   const scrollDownButton = document.querySelector('header > button');
   const scrollDownArrow = document.querySelector('header > img');
@@ -77,4 +103,4 @@ function animateTitle() {
   });
 }
 
-export { animateTitle, addStars, moveStars, moveToNext };
+export { animateTitle, addStars, moveStars, moveToNext, showText };

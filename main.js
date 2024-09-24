@@ -11,5 +11,4 @@ addStars();
 moveStars();
 moveToNext();
 horizontalScroll();
-
 displayFacts();

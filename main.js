@@ -4,18 +4,22 @@ import {
   moveToNext,
   appendRockets,
   rocketStart,
-} from './startPage';
-import { horizontalScroll, displayFacts } from './sectionOne';
-import footer from './footer';
+} from './bundle-files/startPage';
+import { horizontalScroll, displayFacts } from './bundle-files/sectionOne';
+import footer from './bundle-files/footer';
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+function all() {
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
 
-animateTitle();
-appendRockets();
-rocketStart();
-moveToNext();
-horizontalScroll();
-displayFacts();
-footer();
+  animateTitle();
+  appendRockets();
+  rocketStart();
+  moveToNext();
+  horizontalScroll();
+  displayFacts();
+  footer();
+}
+
+all();

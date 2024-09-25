@@ -39,7 +39,9 @@ function rocketStart() {
 
 function fly() {
   const rockets = document.querySelectorAll('.rocket');
+  const wooshAudio = new Audio('audio/woosh.mp3');
 
+  wooshAudio.play();
   rockets.forEach((rocket) => {
     rocket.style.display = 'block';
     rocket.style.animation = 'flyRockets 2s forwards';

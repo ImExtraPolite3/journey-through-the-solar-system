@@ -29,7 +29,7 @@ function moveToNext() {
   });
 }
 function playStartAudio() {
-  const launchAudio = new Audio('/audio/launch-audio.mp3');
+  const launchAudio = new Audio('audio/launch-audio.mp3');
   launchAudio.play();
 }
 

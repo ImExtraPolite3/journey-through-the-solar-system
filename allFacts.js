@@ -22,7 +22,6 @@ const allFacts = [
   ],
   [
     'Venus is the second planet from the Sun, orbiting at an average distance of about 67 million miles (108 million kilometers).',
-    'Venus is often called Earth’s "sister planet" because it’s nearly the same size, with a diameter of 12,104 kilometers (7,521 miles), just slightly smaller than Earth.',
     'Venus’s atmosphere is mostly carbon dioxide (96.5%), with clouds of sulfuric acid. This dense atmosphere traps heat and creates enormous surface pressure—about 92 times that of Earth’s, equivalent to being 3,000 feet underwater.',
     'Venus rotates in the opposite direction to most planets in the solar system, a phenomenon known as "retrograde rotation." It spins from east to west, meaning the Sun rises in the west and sets in the east.',
     'A day on Venus (one full rotation) is longer than its year. Venus takes 243 Earth days to complete one rotation, while its orbit around the Sun takes 225 Earth days.',

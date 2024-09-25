@@ -1,21 +1,14 @@
 import './style.css';
-import {
-  addStars,
-  animateTitle,
-  moveStars,
-  moveToNext,
-  showText,
-} from './startPage';
+import { animateTitle, moveToNext } from './startPage';
 import { horizontalScroll, displayFacts } from './sectionOne';
+import footer from './footer';
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
 animateTitle();
-addStars();
-moveStars();
 moveToNext();
 horizontalScroll();
 displayFacts();
-showText();
+footer();

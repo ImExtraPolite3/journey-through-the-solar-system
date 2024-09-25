@@ -2,8 +2,6 @@ import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
 gsap.registerPlugin(TextPlugin);
 
-const star = '✨';
-
 const titles = [
   'the Solar System',
   'Earth',
@@ -15,45 +13,6 @@ const titles = [
   'Uranus',
   'Neptune',
 ];
-
-function addStars() {
-  const header = document.querySelector('header');
-  const footer = document.querySelector('footer');
-
-  for (let i = 0; i < 100; i++) {
-    const createStar = document.createElement('div');
-    createStar.innerHTML = star;
-    createStar.classList.add('star');
-    header.appendChild(createStar);
-    footer.appendChild(createStar);
-  }
-}
-
-function showText() {
-  const planetImgContainer = document.querySelectorAll('.planet-image');
-  const planetImg = document.querySelectorAll('.planet-image > img');
-  const planetInfo = document.querySelectorAll('.planet-info');
-
-  for (let i = 0; i < planetImgContainer.length; i++) {
-    planetImg[i].addEventListener('click', () => {
-      planetImg.forEach((image) => {
-        image.style.width = '95%';
-      });
-
-      planetInfo.forEach((info) => {
-        info.style.display = 'none';
-      });
-
-      planetImgContainer.forEach((container) => {
-        container.style.flexDirection = 'column';
-      });
-
-      planetImg[i].style.width = 'max(20%, 150px)';
-      planetInfo[i].style.display = 'block';
-      planetImgContainer[i].style.flexDirection = 'row';
-    });
-  }
-}
 
 function moveToNext() {
   const scrollDownButton = document.querySelector('header > button');
@@ -69,24 +28,6 @@ function moveToNext() {
     html.style.overflowY = 'scroll';
   });
 }
-
-function moveStars() {
-  const stars = document.querySelectorAll('.star');
-
-  stars.forEach((star) => {
-    let topPosition = Math.floor(Math.random() * 100);
-    let leftPosition = Math.floor(Math.random() * 100);
-    let rightPosition = Math.floor(Math.random() * 100);
-    let bottomPosition = Math.floor(Math.random() * 100);
-
-    star.style.animation = 'sparkle 20000ms infinite both';
-    star.style.top = `${topPosition}vh`;
-    star.style.left = `${leftPosition}vw`;
-    star.style.right = `${rightPosition}vw`;
-    star.style.bottom = `${bottomPosition}vh`;
-  });
-}
-
 function playStartAudio() {
   const launchAudio = new Audio('./audio/launch-audio.mp3');
   launchAudio.play();
@@ -103,4 +44,4 @@ function animateTitle() {
   });
 }
 
-export { animateTitle, addStars, moveStars, moveToNext, showText };
+export { animateTitle, moveToNext };

@@ -9,8 +9,15 @@
   font-family: 'Orbitron';
 }
 
-html {
+html,
+body {
+  position: relative;
   overflow-y: hidden;
+}
+
+.rocket {
+  position: absolute;
+  bottom: -10px;
 }
 
 header {
@@ -186,15 +193,6 @@ footer > p {
   }
 }
 
-@keyframes slideDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100vh);
-  }
-}
-
 @keyframes sparkle {
   0% {
     opacity: 0;
@@ -207,6 +205,21 @@ footer > p {
   100% {
     opacity: 0;
     transform: scale(1);
+  }
+}
+
+@keyframes flyRockets {
+  0% {
+    /* opacity: 0; */
+    transform: translateY(10vh);
+  }
+  50% {
+    /* opacity: 1; */
+  }
+
+  100% {
+    /* opacity: 0; */
+    transform: translateY(-110vh);
   }
 }
 

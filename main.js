@@ -1,5 +1,10 @@
 import './style.css';
-import { animateTitle, moveToNext } from './startPage';
+import {
+  animateTitle,
+  moveToNext,
+  appendRockets,
+  rocketStart,
+} from './startPage';
 import { horizontalScroll, displayFacts } from './sectionOne';
 import footer from './footer';
 
@@ -8,6 +13,8 @@ window.onbeforeunload = function () {
 };
 
 animateTitle();
+appendRockets();
+rocketStart();
 moveToNext();
 horizontalScroll();
 displayFacts();

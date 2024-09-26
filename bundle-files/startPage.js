@@ -5,7 +5,6 @@ gsap.registerPlugin(TextPlugin);
 const rockets = '🚀';
 
 const titles = [
-  'the Solar System',
   'Earth',
   'Mars',
   'Mercury',
@@ -14,6 +13,7 @@ const titles = [
   'Saturn',
   'Uranus',
   'Neptune',
+  'the Solar System',
 ];
 
 function appendRockets() {
@@ -73,7 +73,7 @@ function animateTitle() {
   let tl = gsap.timeline({ repeat: -1 });
 
   titles.forEach((title) => {
-    tl.to('h1', { duration: 3, text: '' }).to('h1', {
+    tl.to('h1', { delay: 3, duration: 3, text: '' }).to('h1', {
       duration: 3,
       text: `Journey through ${title}`,
     });

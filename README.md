@@ -30,4 +30,5 @@ Within this project I made use of the gsap library in order to make animation th
 ChapGPT provided me with the facts used for each planet.
 </br>
 <a href="https://gsap.com/cheatsheet" target="_blank">Cheatsheet for gsap</a>
+</br>
 <a href="https://gsap.com/docs/v3/Plugins/TextPlugin/" target="_blank">For the text animation</a>

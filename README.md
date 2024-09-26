@@ -1,6 +1,8 @@
 # Journey Through the Solar System
 
-This project was made in order simulate someone traveling through our solar system. This is achieved by allowing the veiwer from the start to feel as if they are in a sort of sci-fi enviroment. Through the use of font, animations, and a horizontal scroll that attempt simulate our Solar System, the veiwer should feel as if they are in space.
+**Project Overview**
+
+This project was made in order simulate someone traveling through our solar system. This is achieved by allowing the viewer from the start to feel as if they are in a sort of sci-fi enviroment. Through the use of font, animations, and a horizontal scroll that attempt simulate our Solar System, the veiwer should feel as if they are in space.
 
  **Figma**
 

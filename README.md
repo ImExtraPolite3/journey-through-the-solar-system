@@ -4,7 +4,7 @@ This project was made in order simulate someone traveling through our solar syst
 
  **Figma**
 
-<a href="https://www.figma.com/design/eVvTzSmau6yp9yK8vMImAS/Journey-through-the-Solar-System-Project?node-id=0-1&node-type=canvas&t=pG4wDlwylKbL150b-0">link to Figma page</a>
+<a href="https://www.figma.com/design/eVvTzSmau6yp9yK8vMImAS/Journey-through-the-Solar-System-Project?node-id=0-1&node-type=canvas&t=pG4wDlwylKbL150b-0" target="_blank">link to Figma page</a>
 
 Using Figma I was able to somewhat picture how the horizonatal scroll would look. It also helped give a birds eye view of how the project would without the constaint of a computer screen. 
 
@@ -19,12 +19,12 @@ Within this project I made use of the gsap library in order to make animation th
 
 **Live Demo:**
 
-<a href="https://imextrapolite3.github.io/journey-through-the-solar-system/">link to live demo of project</a>
+<a href="https://imextrapolite3.github.io/journey-through-the-solar-system/" target="_blank">link to live demo of project</a>
 
 **Credits:**
 
-<a href="https://www.youtube.com/watch?v=Mg3YT5TKNG4&t=610s">Link to video that helped with horizonatal scroll</a>
+<a href="https://www.youtube.com/watch?v=Mg3YT5TKNG4&t=610s" target="_blank">Link to video that helped with horizonatal scroll</a>
 </br>
 ChapGPT provided me with the facts used for each planet.
 </br>
-<a href="https://gsap.com/cheatsheet">Cheatsheet for gsap</a>
+<a href="https://gsap.com/cheatsheet" target="_blank">Cheatsheet for gsap</a>
